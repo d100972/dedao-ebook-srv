@@ -174,8 +174,13 @@ func main() {
 		c.Data(http.StatusOK, "application/atom+xml; charset=utf-8", data)
 	})
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	srv := &http.Server{
-		Addr:    "0.0.0.0:38080",
+		Addr:    "0.0.0.0:" + port,
 		Handler: r,
 	}
 
