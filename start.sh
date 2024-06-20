@@ -3,8 +3,8 @@
 # 编译并启动程序
 build_and_run() {
     echo "Building and running the application..."
-    go build -o app main.go
-    nohup ./app > app.log 2>&1 &
+    go build -o dedao-ebook-srv main.go
+    nohup ./dedao-ebook-srv > app.log 2>&1 &
     echo "Application is running in the background. Logs are being written to app.log."
 }
 
@@ -30,8 +30,8 @@ case "$OS" in
         ;;
     Windows)
         echo "Detected Windows OS"
-        go build -o app.exe main.go
-        nohup ./app.exe > app.log 2>&1 &
+        go build -o dedao-ebook-srv.exe main.go
+        nohup ./dedao-ebook-srv.exe > app.log 2>&1 &
         echo "Application is running in the background. Logs are being written to app.log."
         ;;
     *)

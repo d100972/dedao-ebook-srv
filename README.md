@@ -32,7 +32,7 @@ go run main.go
 
 You can test the application locally by accessing the following URL in your browser:
 ```
-http://127.0.0.1:38080/feeds/dedao.atom
+http://127.0.0.1:8080/feeds/dedao.atom
 ```
 
 ### Building the Application
