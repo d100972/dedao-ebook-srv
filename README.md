@@ -4,6 +4,8 @@ This project provides an Atom RSS feed for new eBooks from Dedao.
 
 ## Getting Started
 
+now, you can to deploy this project to Zeabur. [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/NJR25O?referralCode=d100972) 
+
 ### Prerequisites
 
 - Go programming language installed on your machine.
