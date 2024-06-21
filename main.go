@@ -25,6 +25,7 @@ type Book struct {
 	PublishTime       string `json:"publish_time"`
 	Uptime            string `json:"uptime"`
 	OtherShareSummary string `json:"other_share_summary"`
+	Enid              string `json:"enid"`
 }
 
 type Response struct {
@@ -81,12 +82,13 @@ func generateAtom(books []Book) (string, error) {
 		Created:     now,
 	}
 
+	// book detail url: https://www.dedao.cn/ebook/detail?id=enid
 	for _, book := range books {
 		item := &feeds.Item{
 			Title: book.Title,
-			Link:  &feeds.Link{Href: book.Cover},
+			Link:  &feeds.Link{Href: fmt.Sprintf("https://www.dedao.cn/ebook/detail?id=%s", book.Enid)},
 			Content: fmt.Sprintf(
-				"<img src='%s'/><br/>推荐语: %s<br/><br/>书的介绍: %s<br/><br/>作者介绍: %s<br/><br/>出版时间: %s",
+				"<img src='%s'/><br/>主编推荐语: %s<br/><br/>内容简介: %s<br/><br/>作者介绍: %s<br/><br/>出版时间: %s",
 				book.Cover,
 				book.OtherShareSummary,
 				book.BookIntro,
