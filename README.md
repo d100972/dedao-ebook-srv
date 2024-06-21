@@ -4,7 +4,8 @@ This project provides an Atom RSS feed for new eBooks from Dedao.
 
 ## Getting Started
 
-now, you can to deploy this project to Zeabur. [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/NJR25O?referralCode=d100972) 
+You can easily deploy this project to Zeabur by clicking the button below:
+ [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/NJR25O?referralCode=d100972) 
 
 ### Prerequisites
 
